@@ -1,0 +1,240 @@
+.navbar-logo p {
+    color: black;
+}
+
+#daily-tasks-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0rem;
+  align-items: center;
+  justify-items: center;
+  margin: 1rem
+}
+
+@media (min-width: 1300px) {
+  #daily-tasks-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.daily-task {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem;
+  margin: 1rem;
+  margin-bottom: 0;
+    width: 600px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+
+.navbar {
+    background: #F9FAFB;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    left: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-logo-icon {
+    margin-right: 0.5rem;
+    width: 24px;
+    height: 24px;
+}
+
+.navbar-tabs {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-tab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 100px;
+    max-height: 50px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.navbar-tab:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.selector-container {
+    max-width: 550px;
+    height: 72px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 1000px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.selector {
+    margin: auto;
+    font-size: 27px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: black;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+}
+
+.selector:hover {
+    background: rrgba(244, 11, 11, 0.15)
+}
+
+#daily-add-more {
+    margin: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    padding: 2rem;
+}
+
+
+.check-circle {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-left: 12px;
+    border-radius: 50%;
+    border: 2px solid #4f8cff;
+    background: #fff;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+    position: relative;
+}
+
+.check-circle.checked {
+    background: #4f8cff;
+    border-color: #4f8cff;
+}
+
+.check-circle.checked::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  width: 7px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.daily-task h2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 0.5rem;
+}
+
+.daily-task h2 p {
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Hamgurger menu */
+.profile {
+    position: absolute;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#settings {
+    width: 24px;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    background: white;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    min-width: 140px;
+    overflow: hidden;
+    z-index: 10;
+    flex-direction: column;
+}
+
+.dropdown-menu.show {
+    display: flex;
+}
+
+.dropdown-segment {
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-segment:last-child {
+    border-bottom: none;
+}
+
+.dropdown-segment:hover {
+    background: #f5f6fa;
+}
+
+#tasks {
+    color: #E50000;
+}
+
+#learn {
+    color: #009812;
+}
+
+#rankings {
+    color: #0017E7;
+}

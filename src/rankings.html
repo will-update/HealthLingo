@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rankings | HealthLingo</title>
+    <link rel="stylesheet" href="./src/public/rankings.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <span class="navbar-title">HealthLingo</span>
+        <div class="navbar-tabs">
+            <a class="navbar-tab" href="">Tasks</a>
+            <a class="navbar-tab" href="learn">Learn</a>
+            <a class="navbar-tab active" href="rankings">Rankings</a>
+        </div>
+    </nav>
+    <main class="rankings-container">
+        <h1>Leaderboard</h1>
+        <div class="leaderboard-tabs">
+            <button class="leaderboard-tab active" data-tab="daily">Daily</button>
+            <button class="leaderboard-tab" data-tab="weekly">Weekly</button>
+            <button class="leaderboard-tab" data-tab="monthly">Monthly</button>
+        </div>
+        <section class="leaderboard-section" id="daily-leaderboard">
+            <h2>Daily Progression</h2>
+            <ol class="leaderboard-list">
+                <li><span class="rank">1</span> Alice <span class="score">12 tasks</span></li>
+                <li><span class="rank">2</span> Bob <span class="score">10 tasks</span></li>
+                <li><span class="rank">3</span> You <span class="score">8 tasks</span></li>
+            </ol>
+        </section>
+        <section class="leaderboard-section" id="weekly-leaderboard" style="display:none;">
+            <h2>Weekly Progression</h2>
+            <ol class="leaderboard-list">
+                <li><span class="rank">1</span> Bob <span class="score">54 tasks</span></li>
+                <li><span class="rank">2</span> Alice <span class="score">50 tasks</span></li>
+                <li><span class="rank">3</span> You <span class="score">47 tasks</span></li>
+            </ol>
+        </section>
+        <section class="leaderboard-section" id="monthly-leaderboard" style="display:none;">
+            <h2>Monthly Progression</h2>
+            <ol class="leaderboard-list">
+                <li><span class="rank">1</span> You <span class="score">180 tasks</span></li>
+                <li><span class="rank">2</span> Alice <span class="score">170 tasks</span></li>
+                <li><span class="rank">3</span> Bob <span class="score">165 tasks</span></li>
+            </ol>
+        </section>
+        <section class="streak-section">
+            <h2>Your Streak</h2>
+            <div class="streak-box">
+                <span class="streak-number">7</span>
+                <span class="streak-label">days in a row!</span>
+            </div>
+        </section>
+        <script>
+        // Leaderboard tab switching logic
+        document.querySelectorAll('.leaderboard-tab').forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.leaderboard-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById('daily-leaderboard').style.display = tab.dataset.tab === 'daily' ? '' : 'none';
+                document.getElementById('weekly-leaderboard').style.display = tab.dataset.tab === 'weekly' ? '' : 'none';
+                document.getElementById('monthly-leaderboard').style.display = tab.dataset.tab === 'monthly' ? '' : 'none';
+            });
+        });
+        </script>
+    </main>
+</body>
+</html>

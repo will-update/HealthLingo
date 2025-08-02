@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthLingo App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthLingo App</title>
+    <link rel="stylesheet" href="./src/public/style.css" />
+</head>
+<body>
+    <script src="./src/public/main.js"></script>
+
+    <nav class="navbar">
+        <span class="navbar-logo" href="">
+            <img src="./src/public/healthLingoLogo.svg" class="navbar-logo-icon"></img>
+            <p>HealthLingo</p>
+        </span>
+        <div class="navbar-tabs">
+            <button class="navbar-tab" href="">
+                <p id="tasks">Tasks</p>
+                <img src="./src/public/checklist.svg" class="icon"></img>
+            </button>
+            <button class="navbar-tab" href="learn">
+                <p id="learn">Learn</p>
+                <img src="./src/public/school.svg" class="icon"></img>
+            </button>
+            <button class="navbar-tab" href="rankings">
+                <p id="rankings">Rankings</p>
+                <img src="./src/public/poll.svg" class="icon"></img>
+            </button>
+        </div>
+        <div class="profile">
+            <img src="./src/public/settings.svg" id="settings"></img>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <div class="dropdown-segment">Profile</div>
+                <div class="dropdown-segment">Settings</div>
+                <div class="dropdown-segment">Help</div>
+                <div class="dropdown-segment">Logout</div>
+            </div>
+        </div>
+    </nav>
+    <div class="selector-container">
+        <button class="selector" id="daily">Daily</button>
+        <button class="selector" id="weekly">Weeeekly</button>
+        <button class="selector" id="monthly">Monthly</button>
+    </div>
+    <div id="daily-container">
+        <div id="daily-tasks-container">
+            <div class="daily-task">
+                <h2>
+                    <p>Slept at a consistent time</p>
+                    <span class="check-circle"></span>
+                </h2>
+            </div>
+            <div class="daily-task">
+                <h2>
+                    <p>Turn off screens 30 min before bed</p>
+                    <span class="check-circle"></span>
+                </h2>
+            </div>
+            <div class="daily-task">
+                <h2>
+                    <p>2-min daily deep breathing</p>
+                    <span class="check-circle"></span>
+                </h2>
+            </div>
+            <div class="daily-task">
+                <h2>
+                    <p>Do 5 mins of stretching/mobility</p>
+                    <span class="check-circle"></span>
+                </h2>
+            </div>
+            <div class="daily-task">
+                <h2>
+                    <p>Eat 1 fruit or vegetable</p>
+                    <span class="check-circle"></span>
+                </h2>
+            </div>
+            <div class="daily-task">
+                <h2>
+                    <p>Eat Breakfast</p>
+                    <span class="check-circle"></span>
+                </h2>
+            </div>
+        </div>
+        <div id="daily-add-more">
+            <h2>Welcome to HealthLingo!</h2>
+            <p>or something</p>
+        </div>
+    </div>
+</body>
+</html>
