@@ -1,0 +1,59 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson | HealthLingo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/public/learn-sleep-why-sleeping-consistently-matters.css" />
+    <link rel="icon" type="image/x-icon" href="/src/public/healthLingoLogo.svg">
+</head>
+
+<body>
+    <script src="/src/public/learn-sleep-why-sleeping-consistently-matters.js"></script>
+    <nav class="navbar" style="font-family: Arial;">
+        <a class="navbar-logo" href="/" style="text-decoration: none; color: inherit;">
+            <img src="/src/public/healthLingoLogo.svg" class="navbar-logo-icon" alt="logo">
+            <p>HealthLingo</p>
+        </a>
+        <div class="navbar-tabs">
+            <a class="navbar-tab" href="/" id="tasks-container">
+                <p id="tasks">Tasks</p>
+                <img src="/src/public/checklist.svg" class="icon" id="tasks-icon" alt="tasks">
+            </a>
+            <a class="navbar-tab" href="learn" id="learn-container">
+                <p id="learn">Learn</p>
+                <img src="/src/public/school.svg" class="icon" id="learn-icon" alt="learn">
+            </a>
+            <a class="navbar-tab" href="rankings" id="rankings-container">
+                <p id="rankings">Rankings</p>
+                <img src="/src/public/poll.svg" class="icon" id="rankings-icon" alt="rankings">
+            </a>
+        </div>
+        <div class="profile">
+            <img src="/src/public/settings.svg" id="settings" alt="settings">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <div class="dropdown-segment">Profile</div>
+                <div class="dropdown-segment">Settings</div>
+                <div class="dropdown-segment">Help</div>
+                <div class="dropdown-segment">Logout</div>
+            </div>
+        </div>
+    </nav>
+
+    <div style="display:flex;flex-direction:row;">
+        <div id="container">
+            <img src="/src/public/sleeper.svg" style="width: 380px;"/>
+            <div style="text-decoration: underline;">Consistent Sleep</div>
+            <div>What do you think affects your sleep quality more?</div>
+            <div class="button-container">
+                <button id="btn-correct" class="lesson-btn">The time you go to bed and wake up</button>
+                <button id="btn-wrong" class="lesson-btn">The number of hours you sleep</button>
+            </div>
+            <div class="response"></div>
+        </div>
+        <div class="right-arrow-container">
+            <img src="/src/public/keyboard_arrow_right.svg" class="right-arrow"/>
+        </div>
+    </div>
+</body>

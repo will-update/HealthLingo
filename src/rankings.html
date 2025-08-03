@@ -8,13 +8,37 @@
 </head>
 <body>
     <nav class="navbar">
-        <span class="navbar-title">HealthLingo</span>
+        <a class="navbar-logo" href="/" style="text-decoration: none; color: inherit;">
+            <img src="/src/public/healthLingoLogo.svg" class="navbar-logo-icon"></img>
+            <p>HealthLingo</p>
+        </a>
         <div class="navbar-tabs">
-            <a class="navbar-tab" href="">Tasks</a>
-            <a class="navbar-tab" href="learn">Learn</a>
-            <a class="navbar-tab active" href="rankings">Rankings</a>
+            <a class="navbar-tab" href="/" id="tasks-container">
+                <p id="tasks">Tasks</p>
+                <img src="/src/public/checklist.svg" class="icon" id="tasks-icon"></img>
+            </a>
+            <a class="navbar-tab" href="learn" id="learn-container">
+                <p id="learn">Learn</p>
+                <img src="/src/public/school.svg" class="icon" id="learn-icon"></img>
+            </a>
+            <a class="navbar-tab" href="rankings" id="rankings-container">
+                <p id="rankings">Rankings</p>
+                <img src="/src/public/poll.svg" class="icon" id="rankings-icon"></img>
+            </a>
         </div>
+
+        <div class="profile">
+            <img src="/src/public/settings.svg" id="settings"></img>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <div class="dropdown-segment">Profile</div>
+                <div class="dropdown-segment">Settings</div>
+                <div class="dropdown-segment">Help</div>
+                <div class="dropdown-segment">Logout</div>
+            </div>
+        </div>
+        
     </nav>
+    
     <main class="rankings-container">
         <h1>Leaderboard</h1>
         <div class="leaderboard-tabs">

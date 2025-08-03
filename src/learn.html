@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn | HealthLingo</title>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/public/learn.css" />
+    <link rel="icon" type="image/x-icon" href="/src/public/healthLingoLogo.svg">
+</head>
+<body>
+    <script src="/src/public/learn.js"></script>
+    <nav class="navbar" style="font-family: Arial;">
+        <a class="navbar-logo" href="/" style="text-decoration: none; color: inherit;">
+            <img src="/src/public/healthLingoLogo.svg" class="navbar-logo-icon" alt="logo">
+            <p>HealthLingo</p>
+        </a>
+        <div class="navbar-tabs">
+            <a class="navbar-tab" href="/" id="tasks-container">
+                <p id="tasks">Tasks</p>
+                <img src="/src/public/checklist.svg" class="icon" id="tasks-icon" alt="tasks">
+            </a>
+            <a class="navbar-tab" href="learn" id="learn-container">
+                <p id="learn">Learn</p>
+                <img src="/src/public/school.svg" class="icon" id="learn-icon" alt="learn">
+            </a>
+            <a class="navbar-tab" href="rankings" id="rankings-container">
+                <p id="rankings">Rankings</p>
+                <img src="/src/public/poll.svg" class="icon" id="rankings-icon" alt="rankings">
+            </a>
+        </div>
+        <div class="profile">
+            <img src="/src/public/settings.svg" id="settings" alt="settings">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <div class="dropdown-segment">Profile</div>
+                <div class="dropdown-segment">Settings</div>
+                <div class="dropdown-segment">Help</div>
+                <div class="dropdown-segment">Logout</div>
+            </div>
+        </div>
+    </nav>
+    <div id="sleep-bg-square"></div>
+    <main class="learn-main">
+        <div class="learn-top-row">
+            <div class="status-card">
+                <div class="status-title">Status</div>
+                <div class="status-level">LV 3</div>
+                <div class="status-bar-label" >hp: <span class="status-hp">4/30</span></div>
+                <div class="status-bar hp-bar" style="border-color:#C01717"><div class="bar-inner" style="width:13%;background:#C01717;"></div></div>
+                <div class="status-bar-label" >sp: <span class="status-sp">33/36</span></div>
+                <div class="status-bar sp-bar" style="border-color:#DA7721"><div class="bar-inner" style="width:92%;background:#E8C124;"></div></div>
+            </div>
+            <div class="lesson-card">
+                <div class="lesson-title">Today's Lesson</div>
+                <div class="lesson-topic">Sleep:</div>
+                <div class="lesson-desc">Why Sleeping<br>Consistently Matters</div>
+            </div>
+            <div class="progress-card">
+                <div class="progress-title">Progress</div>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 21%;"></div>
+                </div>
+                <div class="progress-percent">11%</div>
+            </div>
+        </div>
+        <div class="learn-cards-row">
+            <div class="learn-container">
+                <div class="learn-card fitness">
+                    <div class="learn-card-icon"><img src="/src/public/directions_run.svg"/></div>
+                    <div class="learn-card-title">Fitness</div>
+                    <div class="learn-card-menu"><img src="/src/public/list.svg"/></div>
+                </div>
+                <div class="vertical-bar"><div style="width: 100%; height: 85%; background: #191B52;"></div></div>
+            </div>
+
+            <div class="learn-container">
+                <div class="learn-card nutrition">
+                    <div class="learn-card-icon"><img src="/src/public/apple.svg"/></div>
+                    <div class="learn-card-title">Nutrition</div>
+                    <div class="learn-card-menu"><img src="/src/public/list.svg"/></div>
+                </div>
+                <div class="vertical-bar"><div style="width: 100%; height: 94%; background: #191B52;"></div></div>
+            </div>
+
+            <div class="learn-container">
+                <div class="learn-card sleep">
+                    <a href="learn/sleep" style="text-decoration: none; color: inherit; cursor: pointer; width: 100%;">
+                        <div class="learn-card-icon"><img src="/src/public/bedtime.svg"/></div>
+                        <div class="learn-card-title">Sleep</div>
+                        <div class="learn-card-menu"><img src="/src/public/list.svg"/></div>
+                    </a>
+                </div>
+                <div class="vertical-bar"><div style="width: 100%; height: 99%; background: #191B52;"></div></div>
+            </div>
+
+            <div class="learn-container">
+                <div class="learn-card psych">
+                    <div class="learn-card-icon"><img src="/src/public/palette.svg"/></div>
+                    <div class="learn-card-title">Psych</div>
+                    <div class="learn-card-menu"><img src="/src/public/list.svg"/></div>
+                </div>
+                <div class="vertical-bar"><div style="width: 100%; height: 92%; background: #191B52;"></div></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="sleep-lessons-container">
+        <div class="sleep-lesson invisbig"></div>
+
+        <div class="sleep-lesson">
+            <div class="sleep-lesson-title">Catching Up on Sleep Doesn’t Work (Well)</div>
+            <div class="sleep-lesson-body">
+                <div class="sleep-lesson-desc">Debunking the myth of "sleep debt recovery"</div>
+                <div class="importance-container">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon importance-dark">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon importance-dark">
+                </div>
+            </div>
+        </div>
+
+        <div class="sleep-lesson">
+            <div class="sleep-lesson-title">Sleep Isn’t Just One Thing</div>
+            <div class="sleep-lesson-body">
+                <div class="sleep-lesson-desc">Understanding sleep stages (REM, deep, light) and cycles</div>
+                <div class="importance-container">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon importance-dark">
+                </div>
+            </div>
+        </div>
+
+        <div class="sleep-lesson">
+            <div class="sleep-lesson-title">How Light Shapes Your Sleep</div>
+            <div class="sleep-lesson-body">
+                <div class="sleep-lesson-desc">Circadian rhythm & the role of morning / evening light</div>
+                <div class="importance-container">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon">
+                </div>
+            </div>
+        </div>
+
+        <div class="sleep-lesson">
+            <div class="sleep-lesson-title">Build a Wind-Down Ritual</div>
+            <div class="sleep-lesson-body">
+                <div class="sleep-lesson-desc">Sleep onset latency & relaxation techniques</div>
+                <div class="importance-container">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon importance-dark">
+                </div>
+            </div>
+        </div>
+
+        <a class="sleep-lesson" data-lesson-id="sleep-consistency" href="/learn/sleep/why-sleeping-consistently-matters">
+            <div class="sleep-lesson-title">Why Sleeping Consistently Matters</div>
+            <div class="sleep-lesson-body">
+                <div class="sleep-lesson-desc">Covers circadian rhythm and daily regularity.</div>
+                <div class="importance-container">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon">
+                    <img src="/src/public/importanceSquare.svg" class="importance-icon">
+                </div>
+            </div>
+        </a>
+
+        <div class="sleep-lesson invis"></div>
+
+    </div>
+
+</body>
+</html>

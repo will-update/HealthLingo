@@ -1,0 +1,637 @@
+.lesson-completed {
+    background: linear-gradient(#9058E5 0%, #723CC6 100%) !important; /* light pink */
+}
+
+.invis {
+    opacity: 0 !important;
+    padding: 200px 0 !important;
+}
+
+.invisbig {
+    opacity: 0 !important;
+    padding: 565px 0 !important;
+}
+
+#sleep-lessons-container.active {
+    /* max-height: 80vh; */
+    width: auto;
+    /* overflow-y: auto; */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-top: 40vh;
+    padding-bottom: 40vh;
+}
+#sleep-lessons-container.active::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+.sleep-lesson {
+    text-decoration: none; 
+    scroll-snap-align: center;
+    cursor: pointer;
+}
+.sleep-lesson {
+    background: linear-gradient(#5B3793 0%, #40246C 100%);
+    border-radius: 16px;
+    box-shadow: 5px 5px 0px rgb(0, 0, 0);
+    padding: 1.5rem;
+    width: 470px;
+    color: white;
+    z-index: 20;
+    transition: opacity 0.4s cubic-bezier(.4,2,.6,1), transform 0.4s cubic-bezier(.4,2,.6,1);
+    margin: 1rem auto;
+    opacity: 0.7;
+    transform: scale(0.85);
+}
+.sleep-lesson.focus {
+    opacity: 1;
+    transform: scale(1.00);
+    z-index: 21;
+}
+.sleep-lesson.side-1 {
+    opacity: 0.97;
+    transform: scale(0.85);
+}
+.sleep-lesson.side-2-top {
+    opacity: 0.95;
+    transform: scale(0.70);
+    top: 40px;
+    position: relative;
+}
+.sleep-lesson.side-2-bottom {
+    opacity: 0.95;
+    transform: scale(0.70);
+    top: -40px;
+    position: relative;
+}
+
+.sleep-lesson.side-3-top {
+    opacity: 0.95;
+    transform: scale(0.65);
+    top: 90px;
+    position: relative;
+}
+.sleep-lesson.side-3-bottom {
+    opacity: 0.95;
+    transform: scale(0.65);
+    top: -90px;
+    position: relative;
+}
+
+.sleep-lesson.side-4-top {
+    opacity: 0.95;
+    transform: scale(0.60);
+    top: 170px;
+    position: relative;
+}
+.sleep-lesson.side-4-bottom {
+    opacity: 0.95;
+    transform: scale(0.60);
+    top: -170px;
+    position: relative;
+}
+
+.importance-container {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.importance-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+}
+
+.importance-dark {
+    filter: invert(1) hue-rotate(0);
+    fill: black;
+}
+
+.sleep-lesson-desc {
+    margin-right: 1rem; 
+}
+
+.sleep-lesson-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+}
+
+.sleep-lesson-title {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.sleep-lesson {
+    background: linear-gradient(#5B3793 0%, #40246C 100%);  
+    border-radius: 16px;
+    box-shadow: 5px 5px 0px rgb(0, 0, 0);
+    padding: 1.5rem;
+    width: 470px;
+    color: white;
+    z-index: 20;
+    transition: opacity 0.4s cubic-bezier(.4,2,.6,1);
+    margin: 1rem;
+}
+
+#sleep-lessons-container {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    left: 540px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* The container is centered vertically, so the focused lesson will be in the center */
+    height: 80vh;
+    justify-content: center;
+}
+.sleep-lesson {
+    margin: 0;
+}
+#sleep-lessons-container.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    opacity: 1;
+}
+
+
+
+
+
+
+/* Big purple square background for sleep focus */
+#sleep-bg-square {
+    opacity: 0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 70vw;
+    height: 90vw;
+    background: #EADCFF;
+    z-index: -1;
+    transform: translate(-70%, 00%);
+    rotate: 45deg;
+}
+#sleep-bg-square.active {
+    opacity: 1;
+}
+:root {
+    font-family: 'Pixelify Sans';
+}
+
+.learn-container {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    transition: all 0.5s cubic-bezier(.4,2,.6,1);
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.learn-container.shrink {
+    opacity: 0;
+    transform: scale(0.7);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.learn-top-row.shrink {
+    opacity: 0;
+    transform: scale(0.7) translateY(-40px);
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(.4,2,.6,1);
+    z-index: 0;
+}
+
+.learn-container.hide-vertical-bar .vertical-bar {
+    display: none !important;
+}
+
+.learn-container.sleep-focus {
+    position: fixed;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%) scale(1.1);
+    z-index: 10;
+    opacity: 1;
+    background: none;
+    transition: all 0.5s cubic-bezier(.4,2,.6,1);
+}
+.vertical-bar {
+    width: 8px;
+    height: 100%;
+    background: #E9AB10;
+    border: 2px solid #593CFF;
+    border-radius: 6px;
+    margin-left: 12px;
+    margin-right: 8px;
+    box-shadow: 0 0 4px #593CFF33;
+}
+
+body {
+    margin: 0;
+    background: #f5f6fa;
+}
+
+.navbar {
+    background: #4f8cff;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    left: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navbar-logo-icon {
+    margin-right: 0.5rem;
+    width: 24px;
+    height: 24px;
+}
+.navbar-tabs {
+    display: flex;
+    gap: 2rem;
+}
+.navbar-tab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 100px;
+    max-height: 50px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+.navbar-tab:hover {
+    background: rgba(255,255,255,0.3);
+}
+.profile {
+    position: absolute;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+#settings {
+    width: 24px;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    background: white;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    min-width: 140px;
+    overflow: hidden;
+    z-index: 10;
+    flex-direction: column;
+}
+.dropdown-menu.show {
+    display: flex;
+}
+.dropdown-segment {
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+.dropdown-segment:last-child {
+    border-bottom: none;
+}
+.dropdown-segment:hover {
+    background: #f5f6fa;
+}
+.learn-main {
+    padding: 2rem 1rem 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.learn-top-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+    gap: 6rem;
+}
+.status-card {
+    background: #c7d6d6;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    min-width: 160px;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.status-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.status-level {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.status-bar-label {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+.status-bar {
+    width: 100%;
+    height: 12px;
+    background: #191B52;
+    border: 2px solid;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+.bar-inner {
+    height: 100%;
+    border-radius: 0px;
+}
+.lesson-card {
+    background: #4f3c8c;
+    color: #fff;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    min-width: 200px;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.lesson-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.lesson-topic {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+.lesson-desc {
+    font-size: 0.95rem;
+}
+.progress-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    min-width: 200px;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    text-align: center;
+}
+.progress-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.progress-bar {
+    width: 100%;
+    height: 18px;
+    background: #191B52;
+    border: 2px solid #593CFF;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.progress-bar-inner {
+    height: 100%;
+    background: #E9AB10;
+}
+.progress-percent {
+    font-size: 1.1rem;
+    color: #4f3c8c;
+    font-weight: bold;
+}
+
+.learn-card {
+    width: 270px;
+    height: 160px;
+    border-radius: 20px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    position: relative;
+    background: #ffb347;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.learn-card.fitness { background: linear-gradient(#FF9131 0%, #EF533C 100%); }
+.learn-card.nutrition { background: linear-gradient(#48D5AF 0%, #5BCFDC 100%); }
+.learn-card.sleep { background: linear-gradient(#5B3793 0%, #40246C 100%); }
+.learn-card.psych { background: linear-gradient(#A1B1DF 0%, #5E77C1 63%); }
+.learn-card-icon {
+    margin-bottom: 0.6rem;
+}
+.learn-card-title {
+    font-size: 50px;
+    margin-bottom: 0.5rem;
+}
+.learn-card-menu {
+    position: absolute;
+    top: 0.6rem;
+    right: 3rem;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+}
+/* Nav Bar */
+.navbar-logo p {
+    color: black;
+}
+
+
+.navbar {
+    background: #F9FAFB;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    left: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-logo-icon {
+    margin-right: 0.5rem;
+    width: 24px;
+    height: 24px;
+}
+
+.navbar-tabs {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-tab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 100px;
+    max-height: 50px;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar-tab:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+#tasks-container {
+    color: #E50000;
+}
+
+#tasks-container:hover {
+    background-color: #009812;
+    color: white;
+}
+
+#tasks-container:hover #tasks-icon {
+    filter: brightness(0) invert(1);
+    fill: white;
+}
+
+#learn-container {
+    color: #009812;
+}
+
+#learn-container:hover {
+    background-color: #0017E7;
+    color: white;
+}
+
+#learn-container:hover #learn-icon {
+    filter: brightness(0) invert(1);
+    fill: white;
+}
+
+
+#rankings-container {
+    color: #0017E7;
+}
+
+#rankings-container:hover {
+    background-color: #B70000;
+    color: white;
+}
+
+#rankings-container:hover #rankings-icon {
+    filter: brightness(0) invert(1);
+    fill: white;
+}
+
+
+/* Hamgurger menu */
+.profile {
+    position: absolute;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+#settings {
+    width: 24px;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    background: white;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    min-width: 140px;
+    overflow: hidden;
+    z-index: 10;
+    flex-direction: column;
+}
+
+.dropdown-menu.show {
+    display: flex;
+}
+
+.dropdown-segment {
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-segment:last-child {
+    border-bottom: none;
+}
+
+.dropdown-segment:hover {
+    background: #f5f6fa;
+}
+
+.learn-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 1.2rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    transition: all 0.5s cubic-bezier(.4,2,.6,1);
+}
+
+.learn-container {
+    width: 100%;
+    max-width: 420px;
+    display: flex; 
+    flex-direction: row;
+}
